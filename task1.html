@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>NAVIGATION BAR</title>
+ <link rel="stylesheet" href="task.css">
+ 
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        transition: background-color 0.5s ease; /* Adding transition effect */
+    }
+    .clickable {
+        cursor: pointer;
+        color: blue;
+        transition: color 0.5s ease; /* Adding transition effect */
+    }
+    .clickable:hover {
+        color: red; /* Changing color on hover */
+    }
+
+ </style>
+</head>
+<body>
+ <div class="l">
+  <nav>
+  <ul>
+   <li><a href="#">Home</a></li>
+<li><a href="">About</a></li>
+<li><a href="">Services</a></li>
+<li><a href="">Contact</a></li>
+</ul>
+</nav>
+
+
+</div>
+<div class="k">
+ <div class="b">
+<p>This is a <span style="color: burlywood; font-weight: 600;">responsive</span></p>
+<p>Web page</p>
+<h1 id="clickText" class="clickable" style="font-weight: 500;">Click me to change background color!</h1>
+</div>
+</div>
+<script>
+document.getElementById("clickText").addEventListener("click", function() {
+    var colors = ["rgb(157, 242, 195)", "rgb(247, 233, 127)", "rgb(245, 117, 94)", "rgb(94, 245, 142)", "rgb(245, 94, 175)", "rgb(95, 135, 236)"]; // List of colors
+    var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Pick a random color from the list
+    document.body.style.backgroundColor = randomColor; // Apply the random color to the background
+});
+</script>
+
+</body>
+</html>
